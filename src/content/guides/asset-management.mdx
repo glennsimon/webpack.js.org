@@ -662,6 +662,7 @@ And configure them in your webpack configuration:
  import Icon from './icon.png';
  import Data from './data.xml';
  import Notes from './data.csv';
+ import JsonData from './data.json';
 +import toml from './data.toml';
 +import yaml from './data.yaml';
 +import json from './data.json5';
@@ -690,6 +691,7 @@ And configure them in your webpack configuration:
 
    console.log(Data);
    console.log(Notes);
+   console.log(JsonData);
 
    return element;
  }
@@ -733,6 +735,7 @@ For the next guides we won't be using all the different assets we've used in thi
     |- index.html
   |- /src
 -   |- data.csv
+-   |- data.json
 -   |- data.json5
 -   |- data.toml
 -   |- data.xml
@@ -815,6 +818,7 @@ For the next guides we won't be using all the different assets we've used in thi
 -import Icon from './icon.png';
 -import Data from './data.xml';
 -import Notes from './data.csv';
+-import JsonData from './data.json';
 -import toml from './data.toml';
 -import yaml from './data.yaml';
 -import json from './data.json5';
@@ -843,6 +847,7 @@ For the next guides we won't be using all the different assets we've used in thi
 -
 -  console.log(Data);
 -  console.log(Notes);
+-  console.log(JsonData);
 
    return element;
  }
