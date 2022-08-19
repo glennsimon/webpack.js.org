@@ -12,6 +12,7 @@ contributors:
   - wizardofhogwarts
   - astonizer
   - snitin315
+  - glennsimon
 ---
 
 If you've been following the guides from the start, you will now have a small project that shows "Hello webpack". Now let's try to incorporate some other assets, like images, to see how they can be handled.
@@ -445,6 +446,7 @@ Add some data files to your project:
   |- /src
 +   |- data.xml
 +   |- data.csv
++   |- data.json
     |- my-font.woff
     |- my-font.woff2
     |- icon.png
@@ -474,6 +476,18 @@ Zoe,Bill,Reminder,Buy orange juice
 Autumn,Lindsey,Letter,I miss you
 ```
 
+**src/data.json**
+
+```json
+{
+  "item1": "This is item 1",
+  "array1": [
+    "five", 5
+  ],
+  "boolean1": true
+}
+```
+
 Now you can `import` any one of those four types of data (JSON, CSV, TSV, XML) and the `Data` variable you import, will contain parsed JSON for consumption:
 
 **src/index.js**
@@ -484,6 +498,7 @@ Now you can `import` any one of those four types of data (JSON, CSV, TSV, XML) a
  import Icon from './icon.png';
 +import Data from './data.xml';
 +import Notes from './data.csv';
++import JsonData from './data.json';
 
  function component() {
    const element = document.createElement('div');
@@ -500,6 +515,7 @@ Now you can `import` any one of those four types of data (JSON, CSV, TSV, XML) a
 
 +  console.log(Data);
 +  console.log(Notes);
++  console.log(JsonData);
 +
    return element;
  }
